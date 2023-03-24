@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import StartPage from "./Components/StartPage.jsx";
+import QuizPage from "./Components/QuizPage.jsx";
+import ResultPage from "./Components/ResultPage.jsx";
+import { useState } from "react";
+import { PageContext } from "./Components/ContextSetUp.jsx";
 
-function App() {
+function Menti() {
+  const [pageState, setPageState] = useState("Start");
+
+  const [score, setScore] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Menti">
+      <h1>MentiMeter</h1>
+      <PageContext.Provider
+        value={{
+          setPageState,
+          score,
+          setScore,
+        }}
+      >
+        {pageState === "Start" && <StartPage />}
+        {pageState === "Quiz" && <QuizPage />}
+        {pageState === "Result" && <ResultPage />}
+      </PageContext.Provider>
     </div>
   );
 }
 
-export default App;
+export default Menti;

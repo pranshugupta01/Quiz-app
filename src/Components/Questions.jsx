@@ -1,0 +1,42 @@
+export const Questions = [
+  {
+    ques: "Which planet is called Red Planet?",
+    A: "Jupiter",
+    B: "Saturn",
+    C: "Earth",
+    D: "Mars",
+    answer: "D",
+  },
+  {
+    ques: "Which of these is not a planet?",
+    A: "Earth",
+    B: "Mars",
+    C: "Pluto",
+    D: "Mercury",
+    answer: "C",
+  },
+  {
+    ques: "Which is the largest planet?",
+    A: "Mars",
+    B: "Uranus",
+    C: "Saturn",
+    D: "Jupiter",
+    answer: "D",
+  },
+  {
+    ques: "Which is the Smallest planet?",
+    A: "Jupiter",
+    B: "Mars",
+    C: "Uranus",
+    D: "Mercury",
+    answer: "D",
+  },
+  {
+    ques: "Which planet is also called as blue planet?",
+    A: "Mars",
+    B: "Uranus",
+    C: "Venus",
+    D: "Earth",
+    answer: "D",
+  },
+];
